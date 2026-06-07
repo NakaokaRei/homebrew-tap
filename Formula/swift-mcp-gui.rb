@@ -6,8 +6,13 @@ class SwiftMcpGui < Formula
   license "MIT"
   head "https://github.com/NakaokaRei/swift-mcp-gui.git", branch: "master"
 
-  depends_on :macos
+  livecheck do
+    url :stable
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
+
   depends_on xcode: ["26.5", :build]
+  depends_on :macos
 
   def install
     system "swift", "build",
@@ -42,6 +47,6 @@ class SwiftMcpGui < Formula
   end
 
   test do
-    assert_predicate bin/"swift-mcp-gui", :exist?
+    assert_path_exists bin/"swift-mcp-gui"
   end
 end

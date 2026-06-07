@@ -1,0 +1,30 @@
+name: Autobump formulae
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 */6 * * *"
+
+concurrency:
+  group: autobump-formulae
+  cancel-in-progress: false
+
+jobs:
+  autobump:
+    runs-on: macos-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Tap repository
+        run: brew tap NakaokaRei/tap
+
+      - name: Check for new releases and open pull requests
+        uses: Homebrew/actions/bump-packages@main
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          formulae: >
+            NakaokaRei/tap/sagui
+            NakaokaRei/tap/swift-mcp-gui
+          fork: false
