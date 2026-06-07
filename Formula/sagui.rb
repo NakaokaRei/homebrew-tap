@@ -6,8 +6,13 @@ class Sagui < Formula
   license "MIT"
   head "https://github.com/NakaokaRei/SwiftAutoGUI.git", branch: "master"
 
-  depends_on :macos
+  livecheck do
+    url :stable
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
+
   depends_on xcode: ["15.0", :build]
+  depends_on :macos
 
   def install
     system "swift", "build",
