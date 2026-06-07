@@ -1,13 +1,29 @@
 # homebrew-tap
 
-A [Homebrew](https://brew.sh) tap for CLI tools by [@NakaokaRei](https://github.com/NakaokaRei).
+A [Homebrew](https://brew.sh) tap for macOS apps and CLI tools by
+[@NakaokaRei](https://github.com/NakaokaRei).
 
 ## Usage
 
 ```bash
 brew tap NakaokaRei/tap
 brew install <formula>
+brew install --cask <cask>
 ```
+
+## Available casks
+
+### trackpad-air
+
+macOS app that lets you control the mouse with hand gestures captured by the
+camera. Requires Apple Silicon and macOS 26 or later.
+
+```bash
+brew install --cask NakaokaRei/tap/trackpad-air
+```
+
+After install, grant Camera and Accessibility permissions in
+**System Settings → Privacy & Security**.
 
 ## Available formulae
 
