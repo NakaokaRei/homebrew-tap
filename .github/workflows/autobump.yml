@@ -1,4 +1,4 @@
-name: Autobump formulae
+name: Autobump packages
 
 on:
   workflow_dispatch:
@@ -6,7 +6,7 @@ on:
     - cron: "17 */6 * * *"
 
 concurrency:
-  group: autobump-formulae
+  group: autobump-packages
   cancel-in-progress: false
 
 jobs:
@@ -27,4 +27,6 @@ jobs:
           formulae: >
             NakaokaRei/tap/sagui
             NakaokaRei/tap/swift-mcp-gui
+          casks: >
+            NakaokaRei/tap/trackpad-air
           fork: false
