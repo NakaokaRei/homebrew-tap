@@ -1,6 +1,6 @@
 cask "trackpad-air" do
-  version "0.2.1"
-  sha256 "08fcefa4bd5235fdc9fe3566899835f933c4bf27914d99b5cbb6214211b4d40b"
+  version "0.2.2"
+  sha256 "08ed2dcedd931abe224bfe2b95c46fdc5cb0c2e47c0c00a8d73a4df35e0ed0b4"
 
   url "https://github.com/NakaokaRei/TrackpadAir/releases/download/#{version}/TrackpadAir.app.zip"
   name "TrackpadAir"
