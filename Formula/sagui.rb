@@ -1,8 +1,8 @@
 class Sagui < Formula
   desc "CLI for programmatically controlling macOS mouse and keyboard (SwiftAutoGUI)"
   homepage "https://github.com/NakaokaRei/SwiftAutoGUI"
-  url "https://github.com/NakaokaRei/SwiftAutoGUI/archive/refs/tags/0.24.0.tar.gz"
-  sha256 "4af694e0d023fd8122e620e77024dd11c509b98fdf85a4427607f5f52428b339"
+  url "https://github.com/NakaokaRei/SwiftAutoGUI/archive/refs/tags/0.25.0.tar.gz"
+  sha256 "4a4ef7232ab581facc2c8c57aac149f67a89220c31ea5a10a71933b8b9192085"
   license "MIT"
   head "https://github.com/NakaokaRei/SwiftAutoGUI.git", branch: "master"
 
