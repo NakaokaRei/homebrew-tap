@@ -24,9 +24,11 @@ jobs:
         uses: Homebrew/actions/bump-packages@main
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          # Qualified names enable --full-name, which makes PR searches miss
+          # existing bump PRs titled with the short package name.
           formulae: >
-            NakaokaRei/tap/sagui
-            NakaokaRei/tap/swift-mcp-gui
+            sagui
+            swift-mcp-gui
           casks: >
-            NakaokaRei/tap/trackpad-air
+            trackpad-air
           fork: false
