@@ -20,6 +20,9 @@ jobs:
       - name: Tap repository
         run: brew tap NakaokaRei/tap
 
+      - name: Trust repository
+        run: brew trust nakaokarei/tap
+
       - name: Check for new releases and open pull requests
         uses: Homebrew/actions/bump-packages@main
         with:
